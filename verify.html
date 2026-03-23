@@ -4,30 +4,47 @@
     <title>Certificate Verification</title>
 </head>
 
-<body style="text-align:center; margin-top:80px; font-family:Arial; background-color:#f4f6f8;">
+<body style="margin:0; font-family:Arial; background:linear-gradient(to right, #e3f2fd, #f4f6f8);">
 
-  
+    <!-- Main Container -->
+    <div style="display:flex; justify-content:center; align-items:center; height:100vh;">
 
-    <!-- Verified Heading -->
-    <h1 style="color:green;">✔ Certificate Verified</h1>
+        <!-- Card -->
+        <div style="background:white; width:400px; padding:30px; border-radius:15px; 
+                    box-shadow:0 10px 25px rgba(0,0,0,0.1); text-align:center;">
 
-    <!-- Certificate Details Box -->
-    <div style="background:white; display:inline-block; padding:30px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:left;">
+            <!-- Logo -->
+            <img src="logo.png" alt="Company Logo" 
+                 style="width:90px; margin-bottom:15px;">
 
-        <p><b>Name:</b> <span id="name"></span></p>
-        <p><b>Certificate ID:</b> <span id="id"></span></p>
-        <p><b>Company:</b> Cloud Infra Tech Solutions</p>
+            <!-- Company Name -->
+            <h2 style="margin:5px 0; color:#333;">Cloud Infra Tech Solutions</h2>
 
-        <hr>
+            <!-- Verified Badge -->
+            <div style="color:green; font-size:18px; margin:10px 0;">
+                ✔ Certificate Verified
+            </div>
 
-        <!-- Bootcamp Info -->
-        <p><b>Program:</b> Full Stack Development Bootcamp</p>
-        <p><b>Duration:</b> 3 Months</p>
-        <p><b>Status:</b> Successfully Completed</p>
+            <hr style="margin:20px 0;">
 
+            <!-- Details -->
+            <div style="text-align:left; font-size:15px; color:#444;">
+
+                <p><b>Name:</b> <span id="name"></span></p>
+                <p><b>Certificate ID:</b> <span id="id"></span></p>
+
+                <hr>
+
+                <p><b>Program:</b> Full Stack Development Bootcamp</p>
+                <p><b>Duration:</b> 3 Months</p>
+                <p><b>Status:</b> <span style="color:green;">Completed</span></p>
+
+            </div>
+
+        </div>
     </div>
 
-    <!-- Script to Get URL Params -->
+    <!-- Script -->
     <script>
         let p = new URLSearchParams(window.location.search);
         document.getElementById("name").innerText = p.get("name") || "N/A";
