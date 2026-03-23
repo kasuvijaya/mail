@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
-<body style="text-align:center; margin-top:100px; font-family:Arial;">
+<head>
+    <title>Certificate Verification</title>
+</head>
 
-<h2>✅ Certificate Verified</h2>
-<p>Name: <span id="name"></span></p>
-<p>ID: <span id="id"></span></p>
+<body style="text-align:center; margin-top:80px; font-family:Arial; background-color:#f4f6f8;">
 
-<script>
-let p = new URLSearchParams(window.location.search);
-document.getElementById("name").innerText = p.get("name");
-document.getElementById("id").innerText = p.get("id");
-</script>
+  
+
+    <!-- Verified Heading -->
+    <h1 style="color:green;">✔ Certificate Verified</h1>
+
+    <!-- Certificate Details Box -->
+    <div style="background:white; display:inline-block; padding:30px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:left;">
+
+        <p><b>Name:</b> <span id="name"></span></p>
+        <p><b>Certificate ID:</b> <span id="id"></span></p>
+        <p><b>Company:</b> Cloud Infra Tech Solutions</p>
+
+        <hr>
+
+        <!-- Bootcamp Info -->
+        <p><b>Program:</b> Full Stack Development Bootcamp</p>
+        <p><b>Duration:</b> 3 Months</p>
+        <p><b>Status:</b> Successfully Completed</p>
+
+    </div>
+
+    <!-- Script to Get URL Params -->
+    <script>
+        let p = new URLSearchParams(window.location.search);
+        document.getElementById("name").innerText = p.get("name") || "N/A";
+        document.getElementById("id").innerText = p.get("id") || "N/A";
+    </script>
 
 </body>
 </html>
